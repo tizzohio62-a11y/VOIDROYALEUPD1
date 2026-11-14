@@ -501,11 +501,11 @@ body.noinfo #inf,body.noinfo #hud .info{display:none!important}body.nofeed #feed
 <div id="hud" class="ui hide"><div class="score"><div>YOU <b id="k">0</b></div><div id="tm">0:00</div><div>BOTS <b id="d">0</b></div></div>
 <div id="xh" style="position:absolute;left:50%;top:50%;width:0;height:0"></div><div class="feed" id="feed"></div>
 <div id="scope" class="hide"></div><div id="hit"></div><div id="cmdBox" class="hide" style="position:fixed;z-index:1000;left:50%;top:16%;transform:translateX(-50%);width:min(560px,90vw);background:#100c1c;border:1px solid #9b65ff;border-radius:12px;padding:10px;box-shadow:0 8px 32px #000b"><div style="font-size:11px;color:#bda2ff;margin:0 0 6px 4px">OWNER COMMAND · /command for help</div><input id="cmdInput" autocomplete="off" spellcheck="false" placeholder="Type a command…" style="width:100%;box-sizing:border-box;padding:12px;border-radius:8px;border:1px solid #ffffff40;background:#080611;color:white;font:inherit;outline:none"></div><div id="vig"></div><div id="ban"></div><div class="hp"><div id="hpt">100</div><div class="bar"><i id="hpb" style="width:100%"></i></div></div>
-<button class="btn gr m" id="xb" onclick="exitGame()">✕ EXIT</button><div class="info" id="inf"></div><div id="hb"></div><div id="binds" class="hide"><div><kbd>WASD</kbd>Move</div><div><kbd>Shift</kbd>Sprint</div><div><kbd>Space</kbd>Jump ×2</div><div><kbd>Ctrl</kbd>/<kbd>C</kbd>Slide</div><div><kbd>Q</kbd>Dash</div><div><kbd>LMB</kbd>Slash / pad</div><div><kbd>RMB</kbd>Backstab / Aim</div><div><kbd>1</kbd><kbd>2</kbd><kbd>3</kbd>Knife/Pad/Sniper</div><div><kbd>F</kbd>Inspect</div><div><kbd>Arrows</kbd>Look</div><div><kbd>Esc</kbd>Free mouse</div></div>
+<button class="btn gr m" id="xb" onclick="exitGame()">✕ EXIT</button><div class="info" id="inf"></div><div id="hb"></div><div id="binds" class="hide"><div><kbd>WASD</kbd>Move</div><div><kbd>Shift</kbd>Sprint</div><div><kbd>Space</kbd>Jump ×2</div><div><kbd>C</kbd>/<kbd>Ctrl</kbd>Slide <small style="opacity:.7">(use C — Ctrl+W closes the tab)</small></div><div><kbd>Q</kbd>Dash</div><div><kbd>LMB</kbd>Slash / pad</div><div><kbd>RMB</kbd>Backstab / Aim</div><div><kbd>1</kbd><kbd>2</kbd><kbd>3</kbd>Knife/Pad/Sniper</div><div><kbd>F</kbd>Inspect</div><div><kbd>Arrows</kbd>Look</div><div><kbd>Esc</kbd>Free mouse</div></div>
 <div id="mob" class="hide"><div class="joy" id="joy"><i id="jk"></i></div>
 <button class="tb" style="right:max(26px,env(safe-area-inset-right));bottom:36px;width:92px;height:92px" data-a="slash"><small>🔪</small>SLASH</button><button class="tb" style="right:132px;bottom:28px;width:68px;height:68px" data-a="back"><small>🗡️</small>STAB</button><button class="tb" style="right:max(38px,env(safe-area-inset-right));bottom:146px;width:70px;height:70px" data-a="jump"><small>⬆️</small>JUMP</button><button class="tb" style="right:124px;bottom:112px;width:62px;height:62px" data-a="dash"><small>💨</small>DASH</button><button class="tb" style="right:196px;bottom:62px;width:58px;height:58px" data-a="slide"><small>🛷</small>SLIDE</button><button class="tb" style="right:200px;bottom:132px;width:46px;height:46px" data-a="inspect"><small>🌀</small>SPIN</button><button class="tb" style="left:48px;bottom:176px;width:58px;height:58px" data-a="sprint"><small>🏃</small>SPRINT</button></div></div>
 <div id="toast"></div>
-<div id="adp" class="hide" onclick="if(event.target==this)admClose()"><div class="card" style="width:min(380px,92vw);padding:20px;display:flex;flex-direction:column;gap:12px"><h2 style="margin:0">🛠 Admin Panel</h2><div style="opacity:.8;font-size:14px">Gems: <b id="adg">0</b></div><div style="border:1px solid #ffffff24;border-radius:12px;padding:12px"><b>Exclusive skins</b><p style="font-size:13px;opacity:.75;margin:5px 0 10px">Owner-only skins — only this account can equip them.</p><div style="display:flex;gap:8px;flex-wrap:wrap"><button class="btn sm" onclick="admSkin('admin_job')">Equip Job Application</button><button class="btn sm" onclick="admSkin('admin_67')">Equip 67</button><button class="btn sm gr" onclick="admSkin('s0')">Use Grey Default</button></div></div><input id="adn" type="number" min="0" step="1" placeholder="Amount of gems" style="padding:12px;border-radius:10px;border:2px solid #ffffff33;background:#0c1230;color:#fff;font:inherit;font-size:16px"><div style="display:flex;gap:8px;flex-wrap:wrap"><button class="btn" onclick="admGive(1)">Give gems</button><button class="btn gr" onclick="admGive(0)">Set exact</button></div><div style="display:flex;gap:6px;flex-wrap:wrap"><button class="btn sm gr" onclick="admQuick(1000)">+1K</button><button class="btn sm gr" onclick="admQuick(100000)">+100K</button><button class="btn sm gr" onclick="admQuick(1000000)">+1M</button><button class="btn sm gr" onclick="admQuick(1000000000)">+1B</button></div><div id="adm_msg" style="min-height:18px;font-size:13px;color:#7dffa8"></div><button class="btn gr" onclick="admClose()">Close</button></div></div><div id="ld" class="hide"><div class="ldt">VOID ROYALE</div><div class="ldw"><div class="ldr"><span id="ldh">Loading…</span><span id="ldp">0%</span></div><div class="ldb"><i id="ldf"></i></div></div></div><div id="end" class="over hide"></div>
+<div id="adp" class="hide" onclick="if(event.target==this)admClose()"><div class="card" style="width:min(380px,92vw);max-height:90vh;overflow-y:auto;padding:20px;display:flex;flex-direction:column;gap:12px"><h2 style="margin:0">🛠 Admin Panel</h2><div style="opacity:.8;font-size:14px">Gems: <b id="adg">0</b></div><div style="border:1px solid #ffffff24;border-radius:12px;padding:12px"><b>Exclusive skins</b><p style="font-size:13px;opacity:.75;margin:5px 0 10px">Owner-only skins — only this account can equip them.</p><div style="display:flex;gap:8px;flex-wrap:wrap"><button class="btn sm" onclick="admSkin('admin_job')">Equip Job Application</button><button class="btn sm" onclick="admSkin('admin_67')">Equip 67</button><button class="btn sm gr" onclick="admSkin('s0')">Use Grey Default</button></div></div><div style="border:1px solid #ffffff24;border-radius:12px;padding:12px;display:flex;flex-direction:column;gap:8px"><b>🎁 Gift a player</b><p style="font-size:13px;opacity:.75;margin:0">Send gems or a skin to a username. They receive it next time they sign in (same browser).</p><input id="agu" type="text" autocomplete="off" placeholder="Username" style="padding:10px;border-radius:10px;border:2px solid #ffffff33;background:#0c1230;color:#fff;font:inherit;font-size:15px"><div style="display:flex;gap:8px"><input id="agn" type="number" min="1" step="1" placeholder="Gems" style="flex:1;min-width:0;padding:10px;border-radius:10px;border:2px solid #ffffff33;background:#0c1230;color:#fff;font:inherit;font-size:15px"><button class="btn sm" onclick="admGift2('gems')">Gift gems</button></div><div style="display:flex;gap:8px"><select id="ags" style="flex:1;min-width:0;padding:10px;border-radius:10px;border:2px solid #ffffff33;background:#0c1230;color:#fff;font:inherit;font-size:15px"></select><button class="btn sm" onclick="admGift2('skin')">Gift skin</button></div></div><input id="adn" type="number" min="0" step="1" placeholder="Amount of gems" style="padding:12px;border-radius:10px;border:2px solid #ffffff33;background:#0c1230;color:#fff;font:inherit;font-size:16px"><div style="display:flex;gap:8px;flex-wrap:wrap"><button class="btn" onclick="admGive(1)">Give gems</button><button class="btn gr" onclick="admGive(0)">Set exact</button></div><div style="display:flex;gap:6px;flex-wrap:wrap"><button class="btn sm gr" onclick="admQuick(1000)">+1K</button><button class="btn sm gr" onclick="admQuick(100000)">+100K</button><button class="btn sm gr" onclick="admQuick(1000000)">+1M</button><button class="btn sm gr" onclick="admQuick(1000000000)">+1B</button></div><div id="adm_msg" style="min-height:18px;font-size:13px;color:#7dffa8"></div><button class="btn gr" onclick="admClose()">Close</button></div></div><div id="ld" class="hide"><div class="ldt">VOID ROYALE</div><div class="ldw"><div class="ldr"><span id="ldh">Loading…</span><span id="ldp">0%</span></div><div class="ldb"><i id="ldf"></i></div></div></div><div id="end" class="over hide"></div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
 <script>
 const $=i=>document.getElementById(i),RC=['#9aa3b5','#3b8bff','#a54dff','#ffc83a','#6a1fd0'],RN=['Basic','Rare','Epic','Legendary','Void'];
@@ -541,7 +541,7 @@ else{if(a)return E('That name is taken. Tap Sign in.');try{LS.setItem(k,JSON.str
 enter(u.toLowerCase())}catch(e){console.error(e);E('Something went wrong: '+(e&&e.message||e))}}
 let cm=1;function tog(){cm^=1;$('mb').textContent=cm?'Create account':'Sign in';$('tg').textContent=cm?'Already have an account? Sign in':'New here? Create account';$('lerr').textContent='';$('tbC').classList.toggle('on',!!cm);$('tbS').classList.toggle('on',!cm)}
 function guest(){enter('guest')}
-function enter(u){user=u;try{LS.setItem('vr_session',u)}catch(e){}try{S=JSON.parse(LS.getItem('vr_'+u))}catch(e){}S=Object.assign(base(),SETDEF,S||{});sanitizeSave();applyUI();const gift=newAcc&&!S.gifted;newAcc=0;if(gift){S.gems+=750;S.gifted=1}if(XBOX&&!S.pa){S.perf=true;S.pa=1}sv();applyCB();applyGfx();$('login').classList.add('hide');showLobby();if(gift)giftPopup()}
+function enter(u){user=u;try{LS.setItem('vr_session',u)}catch(e){}try{S=JSON.parse(LS.getItem('vr_'+u))}catch(e){}S=Object.assign(base(),SETDEF,S||{});sanitizeSave();applyUI();const gift=newAcc&&!S.gifted;newAcc=0;if(gift){S.gems+=750;S.gifted=1}if(XBOX&&!S.pa){S.perf=true;S.pa=1}let gr=null;try{const q=JSON.parse(LS.getItem(giftKey(u))||'[]');if(Array.isArray(q)&&q.length){gr=applyGifts(q);LS.removeItem(giftKey(u))}}catch(e){}sv();applyCB();applyGfx();$('login').classList.add('hide');showLobby();if(gift)giftPopup();if(gr&&(gr.g||gr.sk.length))giftInboxPopup(gr)}
 function logout(){rdy=0;clearTimeout(rt);sv();user=null;document.querySelectorAll('.over:not([id])').forEach(e=>e.remove());try{LS.removeItem('vr_session')}catch(e){}mode='none';$('lobby').classList.add('hide');$('login').classList.remove('hide')}
 const WRAPS=[{id:'w0',n:'Default',t:'w',r:0,p:0},
 {id:'w1',n:'Crimson Fade',t:'w',r:1,p:250,a:0xc0203a},
@@ -888,7 +888,8 @@ function buildPrismaHuman(parent,rig){
   rig.sync();
   try{hold.updateMatrixWorld(true);const rq=new THREE.Quaternion();rig.root.getWorldQuaternion(rq);rq.invert();
   const ex=bn=>{const b=bones[nm(bn)],pw=new THREE.Quaternion();b.parent.getWorldQuaternion(pw);const pq=rq.clone().multiply(pw),wp=new THREE.Vector3();b.getWorldPosition(wp);rig.root.worldToLocal(wp);return{b,pq,pi:pq.clone().invert(),base:b.quaternion.clone(),s:wp.x<0?-1:1}};
-  rig.ex={chest:bones[nm('chest')],lsh:ex('leftShoulder'),rsh:ex('rightShoulder'),neck:ex('neck')}}catch(e){console.error('idle rig',e)}
+  rig.ex={chest:bones[nm('chest')],lsh:ex('leftShoulder'),rsh:ex('rightShoulder'),neck:ex('neck'),lth:ex('leftThigh'),rth:ex('rightThigh'),lkn:ex('leftCalf'),rkn:ex('rightCalf'),lfo:ex('leftFoot'),rfo:ex('rightFoot'),lfa:ex('leftForearm'),rfa:ex('rightForearm')}}catch(e){console.error('idle rig',e)}
+  rig.walk=!!(rig.ex&&rig.ex.lth);
   const hb=bones[nm('rightHand')];rig.handR=hb;rig.kp=new THREE.Group();rig.kp.position.fromArray(D.kpPos);rig.kp.quaternion.fromArray(D.kpQuat);rig.kp.scale.setScalar(1/SC);hb.add(rig.kp);
   rig.bones=bones;
 }
@@ -899,6 +900,20 @@ function mskMesh(d,mat){const p16=new Int16Array(mu8(d.p).buffer),ix=new Uint16A
 for(let i=0;i<pos.length;i++)pos[i]=p16[i]/32767*d.ext;for(let i=0;i<d.n*3;i++)col[i]=Math.pow(cb[i]/255,2.2)
 const geo=new THREE.BufferGeometry();geo.setAttribute('position',new THREE.BufferAttribute(pos,3));geo.setAttribute('color',new THREE.BufferAttribute(col,3));geo.setIndex(new THREE.BufferAttribute(ix,1));geo.computeVertexNormals();return new THREE.Mesh(geo,mat)}
 // skeleton / JOB / 67 skins: real 3D models (trellis2 GLBs) wrapped in the same rig the idle animation drives
+function skelSplit(rig,mat,D){
+const P=D.body,p16=new Int16Array(mu8(P.p).buffer),ix=new Uint16Array(mu8(P.i).buffer),cb=mu8(P.c),n=P.n,pos=new Float32Array(n*3),col=new Float32Array(n*3);
+for(let i=0;i<n*3;i++){pos[i]=p16[i]/32767*P.ext;col[i]=Math.pow(cb[i]/255,2.2)}
+const reg=(x,y)=>{if(y<.62&&y>-.32&&Math.abs(x)>.235+(.58-y)*.1)return x>0?1:2;if(y<-.12)return x>0?3:4;return 0};
+const bk=[[],[],[],[],[]];
+for(let t=0;t<ix.length;t+=3){const a=ix[t],b=ix[t+1],c=ix[t+2];bk[reg((pos[a*3]+pos[b*3]+pos[c*3])/3,(pos[a*3+1]+pos[b*3+1]+pos[c*3+1])/3)].push(a,b,c)}
+const PV=[[0,0,0],[.28,.56,0],[-.28,.56,0],[.11,-.03,.02],[-.11,-.03,.02]];
+const mk=(tr,pv)=>{const mp=new Map(),np=[],nc=[],ni=[];for(const v of tr){let k=mp.get(v);if(k===undefined){k=np.length/3;mp.set(v,k);np.push(pos[v*3]-pv[0],pos[v*3+1]-pv[1],pos[v*3+2]-pv[2]);nc.push(col[v*3],col[v*3+1],col[v*3+2])}ni.push(k)}
+const g=new THREE.BufferGeometry();g.setAttribute('position',new THREE.BufferAttribute(new Float32Array(np),3));g.setAttribute('color',new THREE.BufferAttribute(new Float32Array(nc),3));g.setIndex(new THREE.BufferAttribute(new Uint32Array(ni),1));g.computeVertexNormals();const m=new THREE.Mesh(g,mat);m.frustumCulled=false;return m};
+const old=rig.breath.children[0];if(old){rig.breath.remove(old);old.geometry.dispose()}
+rig.breath.add(mk(bk[0],PV[0]));
+const hold=[[rig.armR,1],[rig.armL,2],[rig.legR,3],[rig.legL,4]];
+for(const[gp,k]of hold){gp.position.set(PV[k][0],PV[k][1],PV[k][2]);gp.add(mk(bk[k],PV[k]))}
+rig.handR.position.set(.125,-.76,0);rig.noFP=true}
 function buildMeshSkin(g,rig,key){const D=MSK[key];if(!D)return false;
 const mat=new THREE.MeshStandardMaterial({color:0xffffff,roughness:key=='skel'?.6:.72,metalness:0,vertexColors:true}),
 G=(x,y,z,p)=>{const o=new THREE.Group();o.position.set(x,y,z);p.add(o);return o};
@@ -908,7 +923,7 @@ if(D.head){rig.head=G(D.pv[0],D.pv[1],D.pv[2],rig.breath);rig.head.add(mskMesh(D
 if(D.plane){const cv=document.createElement('canvas');cv.width=1024;cv.height=420;const cx=cv.getContext('2d');cx.fillStyle='#26272b';cx.font='900 380px Arial Black,Arial,Helvetica,sans-serif';cx.textAlign='center';cx.textBaseline='middle';cx.fillText('JOB',512,230);const tx=new THREE.CanvasTexture(cv);tx.encoding=THREE.sRGBEncoding;const gp=new THREE.PlaneGeometry(D.plane.w,D.plane.h);gp.rotateY(Math.PI);const pm=new THREE.Mesh(gp,new THREE.MeshBasicMaterial({map:tx,transparent:true,depthWrite:false,polygonOffset:true,polygonOffsetFactor:-2,polygonOffsetUnits:-2}));pm.position.set(D.plane.c[0],D.plane.c[1],D.plane.c[2]);rig.breath.add(pm)}
 rig.armR=G(0,.5,0,rig.torso);rig.armL=G(0,.5,0,rig.torso);rig.handR=G(0,0,0,rig.armR);rig.kp=G(0,0,0,rig.handR);
 rig.legL=G(0,0,0,rig.pelvis);rig.legR=G(0,0,0,rig.pelvis);rig.ftL=G(0,0,0,rig.legL);rig.ftR=G(0,0,0,rig.legR);
-g.userData.rig=rig;return true}
+if(key=='skel'){try{skelSplit(rig,mat,D)}catch(e){console.error('skel split',e)}}rig.walk=key=='skel'&&!!rig.legL.children.length;g.userData.rig=rig;return true}
 function mkBlock(){
 const g=new THREE.Group(),rig={},id=(S&&S.skin)||'s0';
 const cfg={admin_job:{skin:0xf3f0e8,hair:0x493326,shirt:0xf3f0e8,pants:0xf3f0e8,shoe:0xf3f0e8,acc:0x151515,kind:'boy',job:1},sk1:{skin:0xe9e4d2,hair:0xe9e4d2,shirt:0xe9e4d2,pants:0xe9e4d2,shoe:0xe9e4d2,acc:0x15121a,kind:'boy',skeleton:1},admin_67:{skin:0x2fa9e8,hair:0x123a5c,shirt:0x2fa9e8,pants:0x1c7dc0,shoe:0x9aa3ad,acc:0xf3f3f3,kind:'boy',sixSeven:1},s0:{skin:0x9ca3ad,hair:0x555b65,shirt:0x858c96,pants:0x4d535d,shoe:0x252a32,acc:0xb7bdc5,kind:'boy',classic:1},n4:{skin:0xc58f6b,hair:0x573923,shirt:0x65734a,pants:0x343b32,shoe:0x171d1b,acc:0x9a9b70,kind:'boy',classic:1},n2:{skin:0xe5b994,hair:0x5a382b,shirt:0xf3f3f5,pants:0xdce6f4,shoe:0x28344a,acc:0x9bdcff,kind:'girl',winter:1},n1:{skin:0xd7a17e,hair:0x171923,shirt:0x10131d,pants:0x151923,shoe:0x080b12,acc:0x168cff,kind:'girl',blue:1},n3:{skin:0xd5a17e,hair:0x573421,shirt:0x9b2028,pants:0x283a56,shoe:0x171d2a,acc:0xe8f4ff,kind:'boy',winter:1}}[id]||{skin:0x9ca3ad,hair:0x555b65,shirt:0x858c96,pants:0x4d535d,shoe:0x252a32,acc:0xb7bdc5,kind:'boy',classic:1};
@@ -1008,7 +1023,7 @@ if(cfg.sixSeven){
     return{col,stub,mitt,foot};
   };
   const D6=digit(6,-1),D7=digit(7,1);
-  rig.legL=D6.col;rig.legR=D7.col;rig.ftL=D6.foot;rig.ftR=D7.foot;rig.armL=D6.stub;rig.armR=D7.stub;rig.handR=D7.stub;
+  rig.walk=false;rig.legL=D6.col;rig.legR=D7.col;rig.ftL=D6.foot;rig.ftR=D7.foot;rig.armL=D6.stub;rig.armR=D7.stub;rig.handR=D7.stub;
   rig.kp=G(0,-.03,0,rig.handR);g.updateMatrixWorld(true);const q6=new THREE.Quaternion();rig.handR.getWorldQuaternion(q6);rig.kp.quaternion.copy(q6.invert());g.userData.rig=rig;return g;
 }
 rig.root=G(0,0,0,g);rig.pelvis=G(0,1.12,0,rig.root);rig.torso=G(0,0,0,rig.pelvis);B(.42,.16,.28,.04,0,-.02,0,rig.pelvis,pants);B(.48,.61,.29,.055,0,.31,0,rig.torso,shirt);B(.035,.34,.012,.008,0,.31,-.151,rig.torso,acc);
@@ -1059,18 +1074,31 @@ function lobCam(dt){const t=performance.now()/1000;LC.position.x+=((lobMx*.55+Ma
 var lkAv={y:0,p:0,ty:0,tp:0,next:2.2,t:0};
 function applyEx(e,R){e.b.quaternion.copy(e.pi).multiply(R).multiply(e.pq).multiply(e.base)}
 const _eu=new THREE.Euler(),_qq=new THREE.Quaternion();
+var PC={x:0,dir:1,mode:0,until:4,wk:0,ph:0,yaw:Math.PI+.5,gn:7,gt:-9,gk:0};
 function idleAv(ts){if(!av)return;const r=av.userData.rig,t=ts/1000,dt=Math.min(.05,Math.max(0,lkAv.t?t-lkAv.t:0));lkAv.t=t;
-// look around every few seconds: pick a new glance target, ease toward it
 if(t>lkAv.next){const c=Math.random();lkAv.ty=c<.22?0:(Math.random()*2-1)*.62;lkAv.tp=c<.22?0:(Math.random()*2-1)*.14;lkAv.next=t+2+Math.random()*2.8}
 const k=1-Math.exp(-dt*3);lkAv.y+=(lkAv.ty-lkAv.y)*k;lkAv.p+=(lkAv.tp-lkAv.p)*k;
-// breathing: slow inhale/exhale (~4s) with a soft ease
 const br=Math.sin(t*1.55)*.5+.5,b=Math.sin(t*1.55),w=Math.sin(t*.45);
-av.rotation.y=Math.PI+.5+Math.sin(t*.22)*.035;av.position.y=br*.004;
-r.torso.rotation.set(.015-br*.02,.05+w*.015+lkAv.y*.18,-.02+w*.008);
-r.head.rotation.set(.12+lkAv.p+Math.sin(t*.7)*.01,-.38+lkAv.y,.05+lkAv.y*.05);
-r.armR.rotation.set(-.06+b*.012,0,.07+br*.012);r.armL.rotation.set(.1-b*.012,0,-.2-br*.012);
+/* slow pacing: walk a short line, stop, breathe, turn, walk back (lobby only) */
+if(r.walk===undefined)r.walk=!!(r.legL&&r.legL.children.length);const can=tab=='play'&&r.walk;
+if(!can){PC.mode=0;PC.x+=(0-PC.x)*(1-Math.exp(-dt*3))}
+else if(PC.mode==0){if(t>PC.until)PC.mode=1}
+else{PC.x+=PC.dir*.3*dt;if((PC.x-PC.dir*.5)*PC.dir>=0){PC.mode=0;PC.dir*=-1;PC.until=t+2.5+Math.random()*3}}
+const wk=PC.wk+=((PC.mode==1?1:0)-PC.wk)*(1-Math.exp(-dt*3.5)),iw=1-wk;PC.ph+=dt*wk*4.6;const s=Math.sin(PC.ph);
+const ty=PC.mode==1?-PC.dir*Math.PI/2:Math.PI+.5;let dy=ty-PC.yaw;dy=Math.atan2(Math.sin(dy),Math.cos(dy));PC.yaw+=dy*(1-Math.exp(-dt*(PC.mode==1?3.5:2)));
+av.rotation.y=PC.yaw+Math.sin(t*.22)*.035*iw;av.position.x=PC.x;av.position.y=br*.004+Math.abs(s)*.028*wk;
+/* gestures when standing still: shoulder roll, adjust, stretch */
+let gw=0,gk=PC.gk,gu=0;if(PC.mode==0&&wk<.05&&!gk&&t>PC.gn){gk=PC.gk=1+(Math.random()*3|0);PC.gt=t;PC.gn=t+8+Math.random()*7}
+if(gk){gu=(t-PC.gt)/2.4;if(gu>=1){PC.gk=gk=0;gu=0}else gw=Math.sin(Math.PI*gu)}
+const sw=Math.sin(t*.35)*iw;
+if(r.legL&&r.legR){r.legR.rotation.set(.08*iw+s*.5*wk,0,.13*iw+sw*.02);r.legL.rotation.set(-.06*iw-s*.5*wk,0,-.03*iw-sw*.02);if(r.ftR){r.ftR.rotation.x=-Math.max(0,s)*.3*wk;r.ftL.rotation.x=-Math.max(0,-s)*.3*wk}}
+r.torso.rotation.set(.015-br*.02+.03*wk-gw*(gk==3?.12:0),.05+w*.015+lkAv.y*.18*iw+s*.1*wk+gw*(gk==1?Math.sin(gu*Math.PI*4)*.06:0),-.02+w*.008+sw*.015);
+r.head.rotation.set(.12+lkAv.p*iw+Math.sin(t*.7)*.01-gw*(gk==3?.3:0)+gw*(gk==2?.1:0),-.38+lkAv.y*(1-.7*wk),.05+lkAv.y*.05*iw);
+const fid=Math.sin(t*.5)*.03*iw,fid2=Math.sin(t*.33+1)*.03*iw;
+r.armR.rotation.set(-.06+b*.012+fid-s*.18*wk+gw*(gk==3?-.6:0),0,.07+br*.012+gw*(gk==3?1.3:0)+(gk==1?Math.sin(gu*Math.PI*4)*.12*gw:0));
+r.armL.rotation.set(.1-b*.012+fid2+s*.42*wk+gw*(gk==2?1.35:gk==3?-.6:0),0,-.2-br*.012+fid*.6-gw*(gk==3?1.3:0)-(gk==1?Math.sin(gu*Math.PI*4)*.12*gw:0));
 if(r.sync)r.sync();
-if(r.breath)r.breath.scale.set(1+br*.01,1+br*.006,1+br*.014);if(r.ribs)r.ribs.scale.set(1+br*.035,1+br*.012,1+br*.06);const x=r.ex;if(x){x.chest.scale.setScalar(1+br*.014);const lift=br*.045;_eu.set(0,0,lift*x.lsh.s);applyEx(x.lsh,_qq.setFromEuler(_eu));_eu.set(0,0,lift*x.rsh.s);applyEx(x.rsh,_qq.setFromEuler(_eu));_eu.set(lkAv.p*.3,lkAv.y*.3,0);applyEx(x.neck,_qq.setFromEuler(_eu))}
+if(r.breath)r.breath.scale.set(1+br*.01,1+br*.006,1+br*.014);if(r.ribs)r.ribs.scale.set(1+br*.035,1+br*.012,1+br*.06);const x=r.ex;if(x){x.chest.scale.setScalar(1+br*.014);const lift=br*.045;_eu.set(0,0,lift*x.lsh.s);applyEx(x.lsh,_qq.setFromEuler(_eu));_eu.set(0,0,lift*x.rsh.s);applyEx(x.rsh,_qq.setFromEuler(_eu));_eu.set(lkAv.p*.3,lkAv.y*.3,0);applyEx(x.neck,_qq.setFromEuler(_eu));if(x.lth){const E=(e,a)=>{_eu.set(a,0,0);applyEx(e,_qq.setFromEuler(_eu))},cp=Math.cos(PC.ph),kr=-wk*(.08+.55*Math.max(0,cp)),kl=-wk*(.08+.55*Math.max(0,-cp)),tr=s*.5*wk,tl=-s*.5*wk;E(x.rth,tr);E(x.lth,tl);E(x.rkn,kr);E(x.lkn,kl);E(x.rfo,-(tr+kr)*.6);E(x.lfo,-(tl+kl)*.6);E(x.lfa,wk*(.25+.3*Math.max(0,s)));E(x.rfa,wk*.12)}}
 if(avK&&avK.hA)bfAnim(avK,t,0,0)}
 function refreshAvatar(){if(!av){av=mkSkinAv();LS_.add(av)}const r=av.userData.rig;if(avK){r.kp.remove(avK);freeObj(avK);avK=null}if(prevWrap){let kn;try{kn=mkKnife(item(S.knife),prevWrap);kn.scale.set(1.18,1.08,1.18);kn.position.y=.105;r.kp.add(kn);avK=kn}catch(e){console.error(e)}}av.visible=tab=='play'||tab=='locker'}
 const SNI='<svg width="40" height="40" viewBox="0 0 40 40"><rect x="3" y="21" width="26" height="4" rx="1" fill="#dfe6f2"/><rect x="26" y="19" width="11" height="3" fill="#b66cff"/><path d="M3 21l-2 8h7l3-5z" fill="#15151a" stroke="#b66cff" stroke-width="1.5"/><rect x="11" y="15" width="12" height="5" rx="2" fill="#8a3ffc"/></svg>';
@@ -1359,21 +1387,38 @@ let adminESP=false,adminAim=false,adminFly=false;
 function commandOpen(){if(user!=='voidqtm'){toast('Commands are owner-only.');return}const box=$('cmdBox'),inp=$('cmdInput');box.classList.remove('hide');inp.value='';inp.focus();if(document.pointerLockElement&&document.exitPointerLock)document.exitPointerLock()}
 function commandClose(){ $('cmdBox').classList.add('hide'); }
 function runOwnerCommand(raw){if(user!=='voidqtm')return toast('Commands are owner-only.');const bits=String(raw||'').trim().split(/\s+/),cmd=(bits.shift()||'').toLowerCase(),arg=bits.join(' ');if(!cmd)return;
- if(cmd==='/command'||cmd==='/help'){banner('OWNER COMMANDS','#c9a6ff');toast('/aimbot · /esps · /fly · /global message');return}
- if(cmd==='/aimbot'||cmd==='/aim'){adminAim=!adminAim;toast('Aimbot '+(adminAim?'ON':'OFF')+' · scoped sniper tracks nearest practice bot');return}
- if(cmd==='/esps'||cmd==='/esp'){adminESP=!adminESP;for(const b of bots){if(b.esp){b.esp.visible=adminESP&&!b.dead;b.esp.material.depthTest=false;b.esp.material.depthWrite=false;b.esp.renderOrder=999}}toast('ESP '+(adminESP?'ON':'OFF')+' · practice bots through walls');return}
- if(cmd==='/fly'){adminFly=!adminFly;if(P){P.vy=0;P.lau=0}toast('Fly '+(adminFly?'ON':'OFF')+' · WASD move, Space rise, Ctrl descend');return}
+ if(cmd==='/command'||cmd==='/help'){banner('OWNER COMMANDS','#c9a6ff');toast('/fly /unfly · /aimbot /unaimbot · /esps /unesps · /unhack (all off) · /global msg');return}
+ const setAim=on=>{adminAim=on;toast('Aimbot '+(on?'ON':'OFF')+(on?' · scoped sniper tracks nearest practice bot':''))},
+ setEsp=on=>{adminESP=on;for(const b of bots){if(b.esp){b.esp.visible=on&&!b.dead;b.esp.material.depthTest=false;b.esp.material.depthWrite=false;b.esp.renderOrder=999}}toast('ESP '+(on?'ON':'OFF')+(on?' · practice bots through walls':''))},
+ setFly=on=>{adminFly=on;if(P){P.vy=0;P.lau=0}toast('Fly '+(on?'ON':'OFF')+(on?' · WASD move, Space rise, Ctrl descend':''))};
+ if(cmd==='/aimbot'||cmd==='/aim'){setAim(!adminAim);return}
+ if(cmd==='/unaimbot'||cmd==='/unaim'){setAim(false);return}
+ if(cmd==='/esps'||cmd==='/esp'){setEsp(!adminESP);return}
+ if(cmd==='/unesps'||cmd==='/unesp'){setEsp(false);return}
+ if(cmd==='/fly'){setFly(!adminFly);return}
+ if(cmd==='/unfly'){setFly(false);return}
+ if(cmd==='/unhack'||cmd==='/unall'||cmd==='/off'){adminAim=false;adminFly=false;adminESP=false;if(P){P.vy=0;P.lau=0}for(const b of bots){if(b.esp)b.esp.visible=false}toast('All hacks OFF · aimbot, ESP, fly');return}
  if(cmd==='/global'||cmd==='/announce'){if(!arg){toast('Usage: /global Your announcement');return}banner('GLOBAL: '+arg,'#ffe17a');feed('<b style="color:#ffe17a">ANNOUNCEMENT:</b> '+escH(arg));toast('Announcement shown in this game only. Global broadcast needs an online server.');return}
  toast('Unknown command. Try /command');
 }
 $('cmdInput').addEventListener('keydown',e=>{if(e.key==='Enter'){const v=$('cmdInput').value;commandClose();runOwnerCommand(v)}else if(e.key==='Escape'){commandClose()}e.stopPropagation()});
 
-function admOpen(){if(user!='voidqtm')return;$('adg').textContent=S.gems;$('adm_msg').textContent='';$('adp').classList.remove('hide')}
+function admOpen(){if(user!='voidqtm')return;$('ags').innerHTML=ITEMS.filter(i=>i.t==='s'&&!i.admin&&i.p).map(i=>`<option value="${i.id}">${i.n}</option>`).join('');$('adg').textContent=S.gems;$('adm_msg').textContent='';$('adp').classList.remove('hide')}
 function admPracticeToggle(which,on){if(user!=='voidqtm')return;if(which==='esp')adminESP=!!on;if(which==='aim')adminAim=!!on;for(const b of bots){if(b.esp){b.esp.visible=adminESP&&!b.dead;b.esp.material.depthTest=false;b.esp.material.depthWrite=false;b.esp.renderOrder=999}}}
 function admClose(){$('adp').classList.add('hide')}
+addEventListener('beforeunload',e=>{if(typeof mode!=='undefined'&&mode==='game'){e.preventDefault();e.returnValue='';return ''}});
 function admSkin(id){if(user!=='voidqtm')return;eq(id);$('adm_msg').textContent=(id==='s0'?'Grey Default':item(id).n)+' equipped.'}
 function admApply(v,add){if(user!='voidqtm')return;v=Math.floor(+v);if(!isFinite(v)||v<0){$('adm_msg').textContent='Enter a valid amount.';return}S.gems=Math.min(Number.MAX_SAFE_INTEGER,add?S.gems+v:v);sv();upd();$('adg').textContent=S.gems;$('adm_msg').textContent=(add?'Added ':'Set to ')+v.toLocaleString()+' gems.'}
 function admGive(add){admApply($('adn').value,add)}
+function giftKey(n){return 'vr_gifts_'+n}
+function userExists(n){try{return !!(LS.getItem('vr_acc_'+n)||LS.getItem('vr_'+n)||n==='voidqtm')}catch(e){return false}}
+function applyGifts(list){let g=0;const sk=[];for(const x of list){if(x&&x.t==='gems'){const v=Math.floor(+x.v);if(isFinite(v)&&v>0){S.gems=Math.min(Number.MAX_SAFE_INTEGER,S.gems+v);g+=v}}else if(x&&x.t==='skin'){const it=ITEMS.find(i=>i.id===x.v&&i.t==='s'&&!i.admin&&i.p);if(it){if(!S.own.includes(it.id))S.own.push(it.id);sk.push(it.n)}}}return{g,sk}}
+function admGift2(kind){if(user!=='voidqtm')return;const msg=m=>{$('adm_msg').textContent=m},n=String($('agu').value||'').trim().toLowerCase();if(n.length<3)return msg('Enter the username to gift.');if(!userExists(n))return msg('No account named "'+n+'" in this browser.');let gift;if(kind==='gems'){const v=Math.floor(+$('agn').value);if(!isFinite(v)||v<1)return msg('Enter a gem amount (1 or more).');gift={t:'gems',v}}else{const id=$('ags').value,it=ITEMS.find(i=>i.id===id&&i.t==='s'&&!i.admin&&i.p);if(!it)return msg('Pick a skin to gift.');gift={t:'skin',v:id}}
+if(n===user){const r=applyGifts([gift]);sv();upd();$('adg').textContent=S.gems;return msg(kind==='gems'?'Added '+r.g.toLocaleString()+' gems to yourself.':'Added '+r.sk.join(', ')+' to your skins.')}
+let q=[];try{q=JSON.parse(LS.getItem(giftKey(n))||'[]');if(!Array.isArray(q))q=[]}catch(e){q=[]}q.push(gift);try{LS.setItem(giftKey(n),JSON.stringify(q))}catch(e){return msg('Could not save the gift (storage blocked).')}
+msg('Sent '+(kind==='gems'?gift.v.toLocaleString()+' gems':item(gift.v).n+' skin')+' to '+n+'.');if(kind==='gems')$('agn').value=''}
+function giftInboxPopup(r){const d=document.createElement('div');d.className='over';d.style.zIndex=30;const parts=[];if(r.g)parts.push('<div style="font-size:22px;color:#d9b8ff">+ <span style="color:#b66cff">◆</span> '+r.g.toLocaleString()+' Gems</div>');if(r.sk.length)parts.push('<div style="font-size:18px;color:#d9b8ff;margin-top:6px">New skin'+(r.sk.length>1?'s':'')+': '+r.sk.join(', ')+'</div>');d.innerHTML='<div class="card" style="max-width:360px;text-align:center;padding:26px 30px;border:2px solid #b66cff;box-shadow:0 0 40px #8a3ffc88"><div style="font-size:46px">🎁</div><div style="font-size:28px;font-weight:900;margin:6px 0">You got a gift!</div>'+parts.join('')+'<div style="font-size:13px;opacity:.7;margin:8px 0 14px">Sent by the owner.</div><button class="btn" id="gy2" style="font-size:18px;padding:10px 28px">Claim</button></div>';document.body.appendChild(d);d.querySelector('#gy2').onclick=()=>d.remove()}
+
 function admQuick(v){admApply(v,1)}
 // ---- ranked mode
 const RANKS=[{n:'Bronze',min:0,c:'#cd7f32',ic:'🥉'},{n:'Silver',min:400,c:'#d4dbe6',ic:'🥈'},{n:'Diamond',min:1100,c:'#5ad7ff',ic:'💎'},{n:'Champion',min:2200,c:'#ffc533',ic:'🏆'},{n:'Unreal',min:3800,c:'#ff4bd8',ic:'👑'}],RK_WIN=[20,16,13,10,8],RK_LOSS=[12,15,19,24,30],RK_BOT=[1.1,1.25,1.4,1.6,1.8];
@@ -1600,34 +1645,15 @@ try{if(S)applyGfx()}catch(e){}
 /* ---- v7b: skin-colored first-person hands + stronger Potato Mode ---- */
 (function(){
 window.fpSkinArms=function(){try{fpSkinArms2()}catch(e){console.error('hands',e)}};
-function mkFPBoneArm(side,grip){
- var g=new THREE.Group(),bone=new THREE.MeshPhongMaterial({color:0xeeebe2,shininess:30,specular:0x333333}),bone2=new THREE.MeshPhongMaterial({color:0xd9d4c3,shininess:20,specular:0x222222});
- function cyl(r1,r2,len,x,y,z,p,m){var o=new THREE.Mesh(new THREE.CylinderGeometry(r1,r2,len,10),m||bone);o.rotation.x=Math.PI/2;o.position.set(x,y,z);p.add(o);return o}
- function sph(r,x,y,z,p,m){var o=new THREE.Mesh(new THREE.SphereGeometry(r,12,10),m||bone2);o.position.set(x,y,z);p.add(o);return o}
- /* forearm: radius + ulna */
- cyl(.027,.02,.74,.034,0,.08,g);cyl(.022,.016,.74,-.034,0,.08,g);sph(.04,.0,0,.45,g);sph(.026,.034,0,-.29,g);sph(.022,-.034,0,-.29,g);
- /* wrist (carpals) */
- for(var i=0;i<8;i++){var rw=i<4?0:1;sph(.02,((i%4)-1.5)*.027,0,-.31-rw*.034,g)}
- /* palm (metacarpals) */
- for(var m=0;m<4;m++){var mx=(m-1.5)*.033;cyl(.012,.0105,.13,mx*1.15,0,-.405,g);sph(.0155,mx*1.25,0,-.475,g)}
- /* fingers */
- var curl=grip?[-1.05,-1.35,-1.05]:[.3,.55,.5],lens=[.058,.042,.033];
- for(var f=0;f<4;f++){var mid=(f==1||f==2)?1.1:1,top=new THREE.Group();top.position.set((f-1.5)*.04,0,-.48);g.add(top);var par=top;
-  for(var j=0;j<3;j++){var L=lens[j]*mid,seg=new THREE.Group();seg.rotation.x=curl[j]*(f==0?.9:1);seg.position.z=j?-lens[j-1]*mid:0;par.add(seg);cyl(.0108-j*.0012,.0095-j*.0012,L,0,0,-L/2,seg);sph(.0108-j*.0012,0,0,-L,seg);par=seg}}
- /* thumb */
- var th=new THREE.Group();th.position.set(-side*.068,-.012,-.37);th.rotation.y=grip?-side*.6:side*.25;g.add(th);var tp=th,tl=[.05,.04,.03],tc=grip?[-.5,-.65,-.4]:[.2,.3,.25];
- for(var k=0;k<3;k++){var sg=new THREE.Group();sg.rotation.x=tc[k];sg.position.z=k?-tl[k-1]:0;tp.add(sg);cyl(.0125-k*.0012,.011-k*.0012,tl[k],0,0,-tl[k]/2,sg);sph(.0115-k*.0012,0,0,-tl[k],sg);tp=sg}
- g.scale.set(1.55,1.55,1.15);g.traverse(function(o){if(o.isMesh){o.frustumCulled=false;o.renderOrder=8}});
- return g}
 function fpSkinArms2(){
  try{if(fpHands)fpHands.visible=false}catch(e){}
  var hand=new THREE.Color(0xd9a98a),sleeve=new THREE.Color(0x3a3f4a);
  try{var r=av.userData.rig,first=function(o){var c=null;o&&o.traverse(function(m){if(!c&&m.isMesh&&m.material&&m.material.color)c=m.material.color.clone()});return c};
-  var h=first(r.handR),a=first(r.armR);if(h)hand=h;if(a)sleeve=a;if(!h&&a)hand=a.clone()}catch(e){}
+  var h=r.noFP?null:first(r.handR),a=r.noFP?null:first(r.armR);if(h)hand=h;if(a)sleeve=a;if(!h&&a)hand=a.clone()}catch(e){}
  var rg=null;try{rg=av.userData.rig}catch(e){}
  arms.forEach(function(a,gi){
-  if(a.userData.skinArm){a.remove(a.userData.skinArm);a.userData.skinArm=null}a.userData.hasSkinArm=false;a.material.visible=true;   if(S&&S.skin==='sk1'){var bh=mkFPBoneArm(gi===0?-1:1,gi===1);a.add(bh);a.userData.skinArm=bh;a.userData.hasSkinArm=true;a.material.visible=false;a.visible=true;return}
-  try{var src=rg&&(gi===0?rg.armL:rg.armR);if(src){
+  if(a.userData.skinArm){a.remove(a.userData.skinArm);a.userData.skinArm=null}a.userData.hasSkinArm=false;a.material.visible=true;
+  try{var src=rg&&!rg.noFP&&(gi===0?rg.armL:rg.armR);if(src){
    var kn=(typeof avK!=='undefined')?avK:null,kp=kn&&kn.parent;if(kp)kp.remove(kn);
    var cl;try{cl=src.clone(true)}finally{if(kp)kp.add(kn)}
    var lights=[];cl.traverse(function(o){if(o.isLight)lights.push(o)});lights.forEach(function(o){o.parent&&o.parent.remove(o)});
